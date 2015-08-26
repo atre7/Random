@@ -6,7 +6,7 @@ $(document).ready(function() {
   $('#apiQuote').click(function() {
     var url = "http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en" ;
     $.get(url, function(data) {
-      //  alert("recive quote: " + data.quoteText + " autor : " + data.quoteAuthor);
+      alert("recive quote: " + data.quoteText + " autor : " + data.quoteAuthor);
       $('#autor').text("(" + data.quoteAuthor + ")");
       $('#citation').text(data.quoteText);
     });
