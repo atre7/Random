@@ -2,15 +2,36 @@
 
 .header {
 margin:auto;
-height: 20vh;
+height: 10vh;
 background: black;
 }
 
 
-div.col-md-12 {
+.center {
+  display: block;
   padding: 30px;
-  background: blue;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+#quote {
+  font-size: 2em;
+  padding: 30px;
+  background: rgba(215, 240, 144, 0.53);
   height: 30vh;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
+  overflow: auto;
+}
+
+#autor {
+  font-size: 2em;
+  padding: 30px;
+  background: rgba(245, 160, 169, 0.55);
+  height: 20vh;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
