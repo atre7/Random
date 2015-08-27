@@ -1,5 +1,37 @@
 $(document).ready(function() {
 
+  // file reader
+  $('#fileLoadTest').click(function() {
+    // Check for the various File API support.
+    if (window.File && window.FileReader && window.FileList && window.Blob) {
+      // Great success! All the File APIs are supported.
+      alert("Great success! All the File APIs are supported.");
+    } else {
+      alert('The File APIs are not fully supported in this browser.');
+    }
+  });
+  function readSingleFile(e) {
+    var file = e.target.files[0];
+    if (!file) {
+      return;
+    }
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      var contents = e.target.result;
+      displayContents(contents);
+    };
+    reader.readAsText(file);
+  }
+
+  function displayContents(contents) {
+    var element = document.getElementById('file-content');
+    element.innerHTML = contents;
+  }
+
+  document.getElementById('file-input')
+    .addEventListener('change', readSingleFile, false);
+
+
   // Using JSONP  CORS
   $('#apiQuote').click(function() {
     $.ajax({
