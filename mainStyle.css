@@ -1,0 +1,14 @@
+
+
+.header {
+margin:auto;
+height: 20vh;
+background: black;
+}
+
+
+div.col-md-12 {
+  padding: 30px;
+  background: blue;
+  height: 30vh;
+}
