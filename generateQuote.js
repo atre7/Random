@@ -10,6 +10,16 @@ $(document).ready(function() {
       alert('The File APIs are not fully supported in this browser.');
     }
   });
+  // fileReader
+  $('#lineRead').click(function() {
+    $.get('text.txt', function(data) {
+      var lines = data.split('\n');
+      for (var i = 0; i < lines.lengt; i++) {
+        console.log('i : ' + i + " " + lines[i]);
+      }
+    });
+  });
+
   function readSingleFile(e) {
     var file = e.target.files[0];
     if (!file) {
@@ -18,6 +28,10 @@ $(document).ready(function() {
     var reader = new FileReader();
     reader.onload = function(e) {
       var contents = e.target.result;
+      var lines = contents.split('\n');
+      for (var i = 0; i < lines.length; i++) {
+        console.log("i : " + i + " " + lines[i]);
+      }
       displayContents(contents);
     };
     reader.readAsText(file);
