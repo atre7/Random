@@ -27,10 +27,10 @@ background: black;
 }
 
 #autor {
-  font-size: 2em;
+  font-size: 1em;
   padding: 30px;
   background: rgba(245, 160, 169, 0.55);
-  height: 20vh;
+  height: 10vh;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
