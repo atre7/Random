@@ -14,9 +14,19 @@ $(function() {
       success: function(response) {
         //  console.log(response); // server response
         $('#quote').text(response.quoteText);
+
         $('#autor').text(response.quoteAuthor);
+        changeTitle(response.quoteText);
       }
     });
 
   }); // apiQuote ,
+  function changeTitle(title) {
+    document.title = title;
+  }
 })
+$('#tweet').click(function() {
+  window.open('https://twitter.com/intent/tweet?text=' + $('#quote').text() + " - " + $('#autor').text() + ",via @(atre7.github.io/Random)", "popup", "width=800, height=500");
+
+
+});
