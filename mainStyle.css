@@ -1,25 +1,35 @@
 
+body {
+  background: url("dark.png");
+}
 
 .header {
 margin:auto;
 height: 10vh;
-background: black;
+background-color:rgba(238,68,95,0.6);
 }
 
 
 .center {
   display: block;
   padding: 30px;
-  width: auto;
+  width: 200px;
   margin-left: auto;
   margin-right: auto;
 
 }
+
+.button {
+  display: block;
+  margin: 0 auto;
+}
 #quote {
-  font-size: 2em;
+  font-size: 1.5em;
   padding: 30px;
-  background: rgba(215, 240, 144, 0.53);
+  border-radius: 5px;
+  background: rgba(226, 232, 208, 1);
   height: 40vh;
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -27,10 +37,13 @@ background: black;
 }
 
 #autor {
+  display: block;
   font-size: 1em;
   padding: 30px;
+  border-radius: 5px;
   background: rgba(245, 160, 169, 0.55);
   height: 10vh;
+  max-width: 200px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
