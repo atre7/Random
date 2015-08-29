@@ -27,7 +27,7 @@ $(function() {
         };
         index++;
         $('#autor').text(response.quoteAuthor);
-        changeTitle(response.quoteText);
+        //changeTitle(response.quoteText);
         // prev(response.quoteText);
       }
     });
