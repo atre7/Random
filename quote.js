@@ -64,7 +64,7 @@ $(function() {
 
   $('#tweet').click(function() {
 
-    if (($('#quote').text().length + $('#autor').text().length) < 140) {
+    if (($('#quote').text().length + $('#autor').text().length) < 107) {
       window.open('https://twitter.com/intent/tweet?text=' +
         $('#quote').text() + " - " + $('#autor').text() +
         ",via @(atre7.github.io/Random)", "popup", "width=800, height=500");
