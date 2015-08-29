@@ -69,3 +69,8 @@ h1 {
   margin-right: auto;
   text-align: center;
 }
+@media (orientation:portrait){
+  a {
+    display: none;
+  }
+}

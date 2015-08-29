@@ -1,4 +1,5 @@
 $(function() {
+  setIcon();
   var quoteTest;
   var quoteArray = [];
   var index = 0;
@@ -73,6 +74,24 @@ $(function() {
       myWindow.document.write("<p>" + $('#quote').text() + "</p><br>" +
         "<p>This quote is too long for tweet : " + ($('#quote').text().length + $('#autor').text().length) + "</p>");
     }
+
+
+  });
+  function setIcon() {
+    if (screen.height > screen.width) {
+      // portrait
+      $('#newQuote span').hide();
+      $('#tweet span').hide();
+      $('#prevQuote span').hide();
+    } else {
+      // landscape
+      $('#newQuote span').show();
+      $('#tweet span').show();
+      $('#prevQuote span').show();
+    }
+  }
+  $(window).resize(function() {
+    setIcon();
 
 
   });
