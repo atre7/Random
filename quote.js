@@ -1,6 +1,8 @@
 $(function() {
+
+  getQuote();
   // Using JSONP  CORS
-  $('#newQuote').click(function() {
+  function getQuote() {
     $.ajax({
       url: "http://api.forismatic.com/api/1.0/",
       // The name of the callback parameter, as specified by the YQL service
@@ -19,6 +21,10 @@ $(function() {
         changeTitle(response.quoteText);
       }
     });
+  }
+
+  $('#newQuote').click(function() {
+    getQuote();
 
   }); // apiQuote ,
   function changeTitle(title) {
