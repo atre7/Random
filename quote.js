@@ -3,8 +3,9 @@ $(function() {
   var quoteTest;
   var quoteArray = [];
   var index = 0;
-  var p = 1;
+  var p = 0;
   getQuote();
+
   // Using JSONP   CORS
   function getQuote() {
 
@@ -22,16 +23,17 @@ $(function() {
         //  console.log(response); // server response
         $('#quote').text(response.quoteText.replace(/;/gi, ","));
         // same quote contains ";"
+        $('#autor').text(response.quoteAuthor);
         quoteArray[index] = {
           q: response.quoteText.replace(/;/gi, ","),
           a: response.quoteAuthor
         };
         index++;
-        $('#autor').text(response.quoteAuthor);
+
         //changeTitle(response.quoteText);
         // prev(response.quoteText);
       }
-    });
+    }); // apiQuote
 
   }
   function prev(text) {
@@ -41,24 +43,35 @@ $(function() {
   }
 
   $('#prevQuote').click(function() {
-    if ((index - (p + 1)) >= 0) {
-      $('#quote').text(quoteArray[index - (p + 1)].q);
-      $('#autor').text(quoteArray[index - (p + 1)].a);
-      p++;
+    p++;
+    console.log("p " + p);
+    if ((quoteArray.length - 1) - p >= 0) {
+      setQuote(p);
+    } else {
+      p = quoteArray.length - 1;
+
     }
-    if ((index - p) <= 0) {
-      $('#prevQuote').addClass('empty')
+    if ((quoteArray.length - 1) - p <= 0) {
+      $('#prevQuote').addClass('empty');
     }
   });
 
   $('#newQuote').click(function() {
-    getQuote();
-    p = 1;
-    if ((index - p) >= 0) {
-      $('#prevQuote').removeClass('empty')
+    p--;
+    console.log("p " + p);
+    if (p < 0) {
+      getQuote();
+      p = 0;
+    } else {
+      setQuote(p);
     }
 
-  }); // apiQuote ,
+    $('#prevQuote').removeClass('empty');
+  });
+  function setQuote(p) {
+    $('#quote').text(quoteArray[(quoteArray.length - 1) - p].q);
+    $('#autor').text(quoteArray[(quoteArray.length - 1) - p].a);
+  }
   function changeTitle(title) {
     document.title = title;
   }
