@@ -1,6 +1,6 @@
 $(function() {
   setIcon();
-  var quoteTest;
+
   var quoteArray = [];
   var index = 0;
   var p = 0;
@@ -29,17 +29,9 @@ $(function() {
           a: response.quoteAuthor
         };
         index++;
-
-        //changeTitle(response.quoteText);
-        // prev(response.quoteText);
       }
     }); // apiQuote
 
-  }
-  function prev(text) {
-
-    var myWindow = window.open("", "popup", "width=400,height=300");
-    myWindow.document.write("<p>" + text + "</p>");
   }
 
   $('#prevQuote').click(function() {
@@ -49,7 +41,6 @@ $(function() {
       setQuote(p);
     } else {
       p = quoteArray.length - 1;
-
     }
     if ((quoteArray.length - 1) - p <= 0) {
       $('#prevQuote').addClass('empty');
@@ -65,16 +56,14 @@ $(function() {
     } else {
       setQuote(p);
     }
-
     $('#prevQuote').removeClass('empty');
   });
+
   function setQuote(p) {
     $('#quote').text(quoteArray[(quoteArray.length - 1) - p].q);
     $('#autor').text(quoteArray[(quoteArray.length - 1) - p].a);
   }
-  function changeTitle(title) {
-    document.title = title;
-  }
+
 
   $('#tweet').click(function() {
 
@@ -90,8 +79,9 @@ $(function() {
 
 
   });
-  function setIcon() {
-    if (screen.height > screen.width) {
+  function setIcon(height, width) {
+    if (height > width) {
+
       // portrait
       $('#newQuote span').hide();
       $('#tweet span').hide();
@@ -104,8 +94,10 @@ $(function() {
     }
   }
   $(window).resize(function() {
-    setIcon();
-
+    console.log("resize");
+    console.log("sh " + screen.height);
+    console.log("sw " + screen.width);
+    setIcon($(window).height(), $(window).width());
 
   });
 })
