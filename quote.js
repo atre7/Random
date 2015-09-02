@@ -1,5 +1,5 @@
 $(function() {
-  setIcon();
+  setIcon($(window).height(), $(window).width());
 
   var quoteArray = [];
   var index = 0;
