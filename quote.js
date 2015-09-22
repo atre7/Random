@@ -21,6 +21,7 @@ $(function() {
       // Work with the response
       success: function(response) {
         //  console.log(response); // server response
+
         $('#quote').text(response.quoteText.replace(/;/gi, ","));
         // same quote contains ";"
         $('#autor').text(response.quoteAuthor);
@@ -34,29 +35,55 @@ $(function() {
 
   }
 
+  /*  animacia
+   $(document).ready(function(){
+    $('.but').click(function(){
+      $('p').addClass("animated fadeOut");
+      $('.name').addClass("animated fadeOut");
+      window.setTimeout(function(){
+        $('p').removeClass("animated fadeOut");
+        $('.name').removeClass("animated fadeOut");
+        var int = randnum(Object.keys(qts).length);
+        $('p').html(qts[int][0]);
+        $('.name').html(qts[int][1]);
+        $('p').addClass("animated fadeIn");
+        $('.name').addClass("animated fadeIn");
+      }, 1000);
+
+    });
+  });
+  */
   $('#prevQuote').click(function() {
-    p++;
-    console.log("p " + p);
-    if ((quoteArray.length - 1) - p >= 0) {
-      setQuote(p);
-    } else {
-      p = quoteArray.length - 1;
-    }
-    if ((quoteArray.length - 1) - p <= 0) {
-      $('#prevQuote').addClass('empty');
-    }
+    $('#quote,#autor').fadeOut(500, function() {
+      p++;
+      console.log("p " + p);
+      if ((quoteArray.length - 1) - p >= 0) {
+        setQuote(p);
+        $('#quote,#autor').fadeIn(1000);
+      } else {
+        p = quoteArray.length - 1;
+        $('#quote,#autor').fadeIn(1000);
+      }
+      if ((quoteArray.length - 1) - p <= 0) {
+        $('#prevQuote').addClass('empty');
+      }
+    });
   });
 
   $('#newQuote').click(function() {
-    p--;
-    console.log("p " + p);
-    if (p < 0) {
-      getQuote();
-      p = 0;
-    } else {
-      setQuote(p);
-    }
-    $('#prevQuote').removeClass('empty');
+    $('#quote,#autor').fadeOut(500, function() {
+      p--;
+      console.log("p " + p);
+      if (p < 0) {
+        getQuote();
+        $('#quote,#autor').fadeIn(1000);
+        p = 0;
+      } else {
+        setQuote(p);
+        $('#quote,#autor').fadeIn(1000);
+      }
+      $('#prevQuote').removeClass('empty');
+    });
   });
 
   function setQuote(p) {
