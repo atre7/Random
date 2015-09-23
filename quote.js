@@ -24,11 +24,23 @@ $(function() {
 
         $('#quote').text(response.quoteText.replace(/;/gi, ","));
         // same quote contains ";"
-        $('#autor').text(response.quoteAuthor);
+        if (response.quoteAuthor === "" || response.quoteAuthor === null) {
+          $('#autor').text("unknown autor");
+        } else {
+          $('#autor').text(response.quoteAuthor);
+        }
+        console.log("A " + response.quoteAuthor);
+
         quoteArray[index] = {
           q: response.quoteText.replace(/;/gi, ","),
           a: response.quoteAuthor
         };
+        if (response.quoteAuthor === "" || response.quoteAuthor === null) {
+          quoteArray[index] = {
+            q: response.quoteText.replace(/;/gi, ","),
+            a: "unknown autor"
+          };
+        }
         index++;
       }
     }); // apiQuote
@@ -56,7 +68,7 @@ $(function() {
   $('#prevQuote').click(function() {
     $('#quote,#autor').fadeOut(500, function() {
       p++;
-      console.log("p " + p);
+      console.log("pP " + p);
       if ((quoteArray.length - 1) - p >= 0) {
         setQuote(p);
         $('#quote,#autor').fadeIn(1000);
@@ -70,20 +82,29 @@ $(function() {
     });
   });
 
+
+
   $('#newQuote').click(function() {
-    $('#quote,#autor').fadeOut(500, function() {
-      p--;
-      console.log("p " + p);
-      if (p < 0) {
-        getQuote();
-        $('#quote,#autor').fadeIn(1000);
-        p = 0;
-      } else {
+
+    //
+    p--;
+    console.log("p " + p);
+    if (p < 0) {
+      p = 0;
+      $('#quote,#autor').fadeOut(500, function() {
+        getQuote() ;
+      });
+      $('#quote,#autor').fadeIn(100);
+
+    } else {
+      $('#quote,#autor').fadeOut(500, function() {
         setQuote(p);
-        $('#quote,#autor').fadeIn(1000);
-      }
-      $('#prevQuote').removeClass('empty');
-    });
+      });
+      $('#quote,#autor').fadeIn(100);
+    }
+    $('#prevQuote').removeClass('empty');
+
+
   });
 
   function setQuote(p) {
