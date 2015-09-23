@@ -13,6 +13,7 @@ margin:auto;
 min-height: 10vh;
 background-color:rgba(238,68,95,0.6);
   text-align:center;
+  letter-spacing: 5px;
   color: white;
 
 }
@@ -38,15 +39,20 @@ background-color:rgba(238,68,95,0.6);
   margin-top: 20px;
   margin-bottom: 10px;
   text-align: center;
+  box-shadow: 0px 0px 5px 5px rgba(108, 71, 176, .6) inset;
+  border-color: rgb(108, 71, 176) !important;
+
 }
 h1 {
   font-size: 1.5em !important;
+  font-family: 'Molle', cursive;
 }
 .quote {
   display:block;
   font-size: 1em ;
+
   padding: 30px;
-  border-radius: 5px;
+  border-radius: 9px;
   background: rgba(226, 232, 208, 1);
   min-height: 50vh;
   max-width: 700px;
@@ -55,11 +61,14 @@ h1 {
   margin-right: auto;
   text-align: center;
   overflow: auto;
+  box-shadow: 0px 0px 10px 10px rgba(238,68,95,0.9) inset;
 }
+
 
 #autor {
   display: block;
   font-size: 1em;
+  font-family: 'Molle', cursive;
   padding: 10px;
   border-radius: 5px;
   background: rgba(245, 160, 169, 0.55);

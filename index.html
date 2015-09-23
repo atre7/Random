@@ -1,56 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Random quote | atre</title>
-    <link rel="shortcut icon" href="river3.png" >
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="mainStyle.css" media="screen" title="no title" charset="utf-8">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Random quote | atre</title>
+  <link rel="shortcut icon" href="river3.png">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Molle:400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="mainStyle.css" media="screen" title="no title" charset="utf-8">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
-  <body>
-   <div class="header">
-<h1>Random quote generator</h1>
-   </div>
-   <div class="container">
+</head>
+ 
+<body>
+  <div class="header">
+    <h1>Random quote generator</h1>
+  </div>
+  <div class="container">
 
-       <div class=" quote">
-         <h1 id="quote">citat</h1>
-         <p id="autor">autor</p>
+    <div class=" quote">
+      <h1 id="quote">citat</h1>
+      <p id="autor">autor</p>
+    </div>
+    <div class="row">
+      <div class="col-xs-4">
+        <a href="#" id="prevQuote" class="btn btn-lg btn-success twoBtn empty">
+          <i class="fa fa-arrow-circle-left"></i>
+          <span class="network-name"></span>
+          <span>Prev quote</span>
+        </a>
+      </div>
 
-       </div>
-       <div class="row">
-         <div class="col-xs-4">
-         <a href="#" id="prevQuote" class="btn btn-lg btn-success twoBtn empty">
-            <i class="fa fa-arrow-circle-left"></i> <span class="network-name"></span> <span>Prev quote</span> </a>
-         </div>
+      <div class="col-xs-4 ">
+        <a id="tweet" href="#" class="btn btn-default btn-lg twoBtn "><i class="fa fa-twitter fa-fw"></i> <span class="network-name"></span> <span> Tweet quote</span></a>
+      </div>
+      <div class="col-xs-4 ">
+        <a id="newQuote" class="btn btn-lg btn-warning twoBtn ">
+          <span> New quote</span>
+          <span class="network-name"></span><i class="fa fa-arrow-circle-right"></i></a>
+      </div>
+    </div>
 
-         <div class="col-xs-4 ">
-           <a id="tweet" href="#"  class="btn btn-default btn-lg twoBtn "><i class="fa fa-twitter fa-fw"></i> <span class="network-name"></span> <span> Tweet quote</span></a>
-         </div>
-        <div class="col-xs-4 ">
-           <a id="newQuote" class="btn btn-lg btn-warning twoBtn "><span> New quote</span> <span class="network-name"></span><i class="fa fa-arrow-circle-right"></i></a>
-         </div>
-       </div>
+  </div>
+  </div>
 
-   </div>
-</div>
-
-   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-   <!-- Include all compiled plugins (below), or include individual files as needed -->
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-   <script src="quote.js" charset="utf-8"></script>
- </body>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="quote.js" charset="utf-8"></script>
+</body>
 
 
 </html>
