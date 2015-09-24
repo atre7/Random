@@ -86,8 +86,6 @@ $(function() {
 
   });
 
-
-
   $('#newQuote').click(function() {
     console.log("p Click " + p);
     //
@@ -96,9 +94,8 @@ $(function() {
     if (p < 0) {
       p = 0;
       $('#quote,#autor').fadeOut(500, function() {
-        getQuote() ;
+        getQuote();
       });
-
 
     } else {
       $('#quote,#autor').fadeOut(500, function() {
@@ -117,7 +114,6 @@ $(function() {
     $('#autor').text(quoteArray[(quoteArray.length - 1) - p].a);
   }
 
-
   $('#tweet').click(function() {
 
     if (($('#quote').text().length + $('#autor').text().length) < 107) {
@@ -130,8 +126,8 @@ $(function() {
         "<p>This quote is too long for tweet : " + ($('#quote').text().length + $('#autor').text().length) + "</p>");
     }
 
-
   });
+
   function setIcon(height, width) {
     if (height > width) {
 
