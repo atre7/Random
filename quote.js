@@ -66,45 +66,50 @@ $(function() {
   });
   */
   $('#prevQuote').click(function() {
-    $('#quote,#autor').fadeOut(500, function() {
-      p++;
-      console.log("pP " + p);
-      if ((quoteArray.length - 1) - p >= 0) {
+
+    p++;
+    console.log("pP " + p);
+
+    if ((quoteArray.length - 1) - p >= 0) {
+      $('#quote,#autor').fadeOut(500, function() {
         setQuote(p);
-        $('#quote,#autor').fadeIn(1000);
-      } else {
-        p = quoteArray.length - 1;
-        $('#quote,#autor').fadeIn(1000);
-      }
-      if ((quoteArray.length - 1) - p <= 0) {
-        $('#prevQuote').addClass('empty');
-      }
-    });
+      });
+
+    } else {
+      p = quoteArray.length - 1;
+
+    }
+    $('#quote,#autor').fadeIn(1000);
+    if ((quoteArray.length - 1) - p <= 0) {
+      $('#prevQuote').addClass('empty');
+    }
+
   });
 
 
 
   $('#newQuote').click(function() {
-
+    console.log("p Click " + p);
     //
     p--;
-    console.log("p " + p);
+    console.log("p Minus " + p);
     if (p < 0) {
       p = 0;
       $('#quote,#autor').fadeOut(500, function() {
         getQuote() ;
       });
-      $('#quote,#autor').fadeIn(100);
+
 
     } else {
       $('#quote,#autor').fadeOut(500, function() {
         setQuote(p);
       });
-      $('#quote,#autor').fadeIn(100);
+
     }
+    $('#quote,#autor').fadeIn(1000);
     $('#prevQuote').removeClass('empty');
 
-
+    console.log("p End " + p);
   });
 
   function setQuote(p) {
