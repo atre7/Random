@@ -1,80 +1,80 @@
 body {
-  background: url("http://atre7.github.io/Random/dark.png");
- /* background: url("dark.png");*/
+    background: url("http://atre7.github.io/Random/dark.png");
+    /* background: url("dark.png");*/
 }
 
 .container {
-
-max-width: 700px;
+    max-width: 700px;
 }
+
 .header {
-margin:auto;
-  padding: 5px;
-min-height: 10vh;
-background-color:rgba(238,68,95,0.6);
-  text-align:center;
-  letter-spacing: 5px;
-  color: white;
+    margin: auto;
+    padding: 5px;
+    min-height: 10vh;
+    background-color: rgba(238, 68, 95, 0.6);
+    text-align: center;
+    letter-spacing: 5px;
+    color: white;
+}
 
-}
 .empty {
-  opacity: 0.4 !important;
+    opacity: 0.4 !important;
 }
+
 .twoBtn:hover {
-  opacity: 1;
+    opacity: 1;
 }
 
 .twoBtn {
-
-  display: block;
-  opacity: 0.8;
-  font-size: 1.5em;
-  padding: 10px;
-  border-radius: 5px;
-
-  /*min-height: 10vh;*/
-  max-width: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  text-align: center;
-  box-shadow: 0px 0px 5px 5px rgba(108, 71, 176, .6) inset;
-  border-color: rgb(108, 71, 176) !important;
-
+    display: block;
+    opacity: 0.8;
+    font-size: 1.5em;
+    padding: 10px;
+    border-radius: 5px;
+    /*min-height: 10vh;*/
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 5px 5px rgba(108, 71, 176, .6) inset;
+    border-color: rgb(108, 71, 176) !important;
 }
+
 h1 {
-  font-size: 1.5em !important;
-  font-family: 'Molle', cursive;
+    font-size: 1.5em !important;
+    font-family: 'Molle', cursive;
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-weight: bold;
 }
+
 .quote {
-  display:block;
-  font-size: 1em ;
-
-  padding: 30px;
-  border-radius: 9px;
-  background: rgba(226, 232, 208, 1);
-  min-height: 50vh;
-  max-width: 700px;
-  margin-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  overflow: auto;
-  box-shadow: 0px 0px 10px 10px rgba(238,68,95,0.9) inset;
+    display: block;
+    font-size: 1em;
+    padding: 30px;
+    border-radius: 9px;
+    background: rgba(226, 232, 208, 1);
+    min-height: 50vh;
+    max-width: 700px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    overflow: auto;
+    box-shadow: 0px 0px 10px 10px rgba(238, 68, 95, 0.9) inset;
 }
-
 
 #autor {
-  display: block;
-  font-size: 1em;
-  font-family: 'Molle', cursive;
-  padding: 10px;
-  border-radius: 5px;
-  background: rgba(245, 160, 169, 0.55);
-  min-height: 8vh;
-  max-width: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+    display: block;
+    font-size: 1em;
+    font-family: 'Molle', cursive;
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(245, 160, 169, 0.55);
+    min-height: 8vh;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
